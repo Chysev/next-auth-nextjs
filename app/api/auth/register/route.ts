@@ -36,6 +36,8 @@ export async function POST(req: any) {
 
       return NextResponse.json("Account Created");
     }
+
+    return NextResponse.json("Account is already taken");
   } catch (error) {
     throw error;
   }
