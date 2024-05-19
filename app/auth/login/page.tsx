@@ -40,12 +40,11 @@ const Login = () => {
     }
 
     await signIn("credentials", {
-      redirect: false,
+      callbackUrl: process.env.NEXTAUTH_URL,
       email: login.email,
       password: login.password,
     }).then((error: any) => {
       console.log(error);
-      router.push("/profile");
     });
   };
 
